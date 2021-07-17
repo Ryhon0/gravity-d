@@ -1,0 +1,38 @@
+module gravity.c.parser;
+
+import gravity.c.delegate_;
+import gravity.c.ast;
+
+//
+//  gravity_parser.h
+//  gravity
+//
+//  Created by Marco Bambini on 01/09/14.
+//  Copyright (c) 2014 CreoLabs. All rights reserved.
+//
+
+extern (C):
+
+/*
+    Parser is responsible to build the AST, convert strings and number from tokens and
+    implement syntax error recovery strategy.
+
+    Notes about error recovery:
+    Each parse* function can return NULL in case of error but each function is RESPONSIBLE
+    to make appropriate actions in order to handle/recover errors.
+
+    Error recovery techniques can be:
+    Shallow Error Recovery
+    Deep Error Recovery
+    https://javacc.java.net/doc/errorrecovery.html
+
+ */
+
+// opaque datatype
+struct gravity_parser_t;
+
+// public functions
+gravity_parser_t* gravity_parser_create (const(char)* source, size_t len, uint fileid, bool is_static);
+void gravity_parser_free (gravity_parser_t* parser);
+gnode_t* gravity_parser_run (gravity_parser_t* parser, gravity_delegate_t* delegate_);
+gnode_t* parse_func (gravity_parser_t* parser);
