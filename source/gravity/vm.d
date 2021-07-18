@@ -7,7 +7,6 @@ import gravity.fiber;
 import gravity.closure;
 import gravity.callbacks;
 import gravity.c.value;
-import gravity.object;
 
 import std.string;
 import gravity.utils;
