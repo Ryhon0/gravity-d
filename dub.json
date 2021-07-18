@@ -4,10 +4,10 @@
 	],
 	"copyright": "Copyright © 2021, ryhon",
 	"description": "D bindings for Gravity",
-	"targetType": "executable",
 	"license": "GPL-3.0",
 	"name": "gravity-d",
-	"sourceFiles-linux": ["bin/gravity_ast.o",
+	"sourceFiles-linux": [
+		"bin/gravity_ast.o",
 		"bin/gravity_codegen.o",
 		"bin/gravity_compiler.o",
 		"bin/gravity_core.o",
@@ -30,5 +30,7 @@
 		"bin/gravity_utils.o",
 		"bin/gravity_value.o",
 		"bin/gravity_visitor.o",
-		"bin/gravity_vm.o"]
+		"bin/gravity_vm.o"
+	],
+	"targetType": "library"
 }
