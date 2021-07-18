@@ -10,6 +10,8 @@ Currently the only fully wrapped classes are GravityVM, GravityCompiler, Gravity
 4. Run `dstep *` in the folder
 
 ## TODO
+* Unit tests
+* gravity_property_t and GravityProperty
 * Match wrapper module names with bindings
 * Write more wrappers
 	* Delegate wrappers
